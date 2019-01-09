@@ -1,4 +1,4 @@
-![alt text](https://github.com/arnodelorme/muse_brain_display/muse_brain_image.png "muse_brain.m")
+![Muse 3-D display](https://github.com/arnodelorme/muse_brain_display/blob/master/muse_brain_image.png)
 
 # Muse 3-D Brain Art Display
 
