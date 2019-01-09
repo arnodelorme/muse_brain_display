@@ -1,3 +1,5 @@
+![alt text](https://github.com/arnodelorme/muse_brain_display/muse_brain_image.png "muse_brain.m")
+
 # Muse 3-D Brain Art Display
 
 This Matlab program allows to display Muse measures exported using the musemonitor smartphone app to be vizualized on a 3-D brain.
