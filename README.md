@@ -34,7 +34,7 @@ https://www.youtube.com/watch?v=oZDS52bRmXk
 
 - The MuseMonitor app which collects the data only works (as of Jan 2019) on Muse headsets version 1, not on the newer Muse 2. So only Muse 1 data files may be vizualized using this program. 
 
-# Future direction
+# Future directions
 
 One project would be to change the reference of the raw data (compute average reference) then recompute spectral power for each channel prior to vizualising power.
 
