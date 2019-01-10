@@ -40,6 +40,8 @@ https://www.youtube.com/watch?v=oZDS52bRmXk
 
 One project would be to change the reference of the raw data (compute average reference) then recompute spectral power for each channel prior to vizualising power.
 
+A second project would be to use the code for eLoreta to perform more accurate projection of activity on the brain volume, then extrapolate to the cortex surface.
+
 Another project would be to connect Muse to Matlab either using LSL (Labstreaminglayer) or the OSC (Open Sound Control) protocol. The Muse SDK (Software Development Kit) supports both protocols. Then it would be possible to see changes in the 3-D brain in real time. 
 
-These are not a hard projects. Please fork this repository and make push request if you implement these changes.
+These are not a hard projects (although the second one can be technical). Please fork this repository and make push request if you implement these changes.
