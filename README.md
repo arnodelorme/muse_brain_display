@@ -8,7 +8,7 @@ This Matlab program allows to display Muse measures exported using the musemonit
 
 This is primarily an art project, as true back projection of electrode activity on the cortex would require (1) complex inverse source localization math to account for volume condution in different mediums (skin, skull, CSF, cortex) (2) more than 4 channels (in general 64 channels are needed). Here the color of the cortex simply depends on the distance of a given vertices of the brain mesh with each of the 4 Muse electrodes, which is not realistic. At best, it is poor approximation of volume conductions effects.
 
-Note about signal recorded from each electrodes: Muse records 4 scalp channels, each one representing the difference between some electrode voltage(s) and some other electrode voltage(s). In the Muse case, the average signal from the two mastoid electrodes (posterior electrodes behind the ears) is subtracted from all 4 channels. So the activity of a given channel does not really represent the activity at the location of the channel, but instead the difference of potential between the electrode at the location between a given channel and its reference(s). Ideally, for this visualization, one would transform the data to average reference prior to computing spectral power. However, given that spectral power is provided by the Muse headset, this is not what is done here (it would be possible to transform the raw data to average reference and recompute spectral power).
+Note about the four Muse channels: Muse records from four scalp electrodes and outputs four EEG channels, each of which must represent the difference between some electrode voltage(s) and some other electrode voltage(s). In the Muse case, the average of the two mastoid electrode signals (posterior electrodes behind the ears) is used as the common reference, meaning it is subtracted from each of the single electrode signals to form the four output channels. So the activity of a given channel does not really represent summed electrical activity arriving at the location of the single electrode, but instead, the potential difference between the voltage at that electrode and at the reference channel pair. This also means that the signals from the two mastoid electrode channels are identical except for sign. To improve the representation of this this visualization somewhat, one might transform the data to average reference and then compute spectral power. However, here I have used the spectral power values provided by the Muse headset.
 
 # How to install and use
 
@@ -34,7 +34,7 @@ https://www.youtube.com/watch?v=oZDS52bRmXk
 
 - There is a zoom problem on some versions of Matlab. If this is the case, you can adjust the zoom by changing the parameter "camZoomVal" in the muse_brain.m program
 
-- The MuseMonitor app which collects the data only works (as of Jan 2019) on Muse headsets version 1, not on the newer Muse 2. So only Muse 1 data files may be vizualized using this program. 
+- The MuseMonitor app which collects the data only works (as of Jan 2019) on Muse headsets version 1, not on the newer Muse 2. So only Muse 1 data files may be vizualized using this program.
 
 # Future directions
 
@@ -45,3 +45,7 @@ A second project would be to use the code for eLoreta to perform more accurate p
 Another project would be to connect Muse to Matlab either using LSL (Labstreaminglayer) or the OSC (Open Sound Control) protocol. The Muse SDK (Software Development Kit) supports both protocols. Then it would be possible to see changes in the 3-D brain in real time. 
 
 These are not a hard projects (although the second one can be technical). Please fork this repository and make push request if you implement these changes.
+
+# Acknowledgements
+
+Thank you to Scott Makeig for edits and discussions. Thank you to Julia Mossbridge for design ideas.
