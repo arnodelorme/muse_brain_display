@@ -32,6 +32,6 @@ https://www.youtube.com/watch?v=oZDS52bRmXk
 
 - The MuseMonitor app which collects the data only works (as of Jan 2019) on Muse headsets version 1, not on the newer Muse 2. So only Muse 1 data files may be vizualized using this program. 
 
-# Cool project
+# Future extension
 
-A cool project would be to connect Muse to Matlab either using LSL (Labstreaminglayer) or the OSC (Open Sound Control) protocol. The Muse SDK (Software Development Kit) supports both protocols. Then it would be possible to see changes in the 3-D brain in real time. It is not a hard project, but who has time these days. If you fork this repository to do that, let me know and I will reference it here.
+A great project would be to connect Muse to Matlab either using LSL (Labstreaminglayer) or the OSC (Open Sound Control) protocol. The Muse SDK (Software Development Kit) supports both protocols. Then it would be possible to see changes in the 3-D brain in real time. It is not a hard project, but who has time these days. If you fork this repository to do that, let me know and I will reference it here.
