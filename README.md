@@ -4,6 +4,8 @@
 
 This Matlab program allows to display Muse measures exported using the musemonitor smartphone app to be vizualized on a 3-D brain.
 
+# Accuracy of the representation
+
 This is primarily an art project, as true back projection of electrode activity on the cortex would require (1) complex inverse source localization math to account for volume condution in different mediums (skin, skull, CSF, cortex) (2) more than 4 channels (in general 64 channels are needed). Here the color of the cortex simply depends on the distance of a given vertices of the brain mesh with each of the 4 Muse electrodes, which is not realistic. At best, it is poor approximation of volume conductions effects.
 
 Note about signal recorded from each electrodes: Muse records 4 scalp channels, each one representing the difference between some electrode voltage(s) and some other electrode voltage(s). In the Muse case, the average signal from the two mastoid electrodes (posterior electrodes behind the ears) is subtracted from all 4 channels. So the activity of a given channel does not really represent the activity at the location of the channel, but instead the difference of potential between the electrode at the location between a given channel and its reference(s). Ideally, for this visualization, one would transform the data to average reference prior to computing spectral power. However, given that spectral power is provided by the Muse headset, this is not what is done here (it would be possible to transform the raw data to average reference and recompute spectral power).
