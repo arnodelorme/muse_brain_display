@@ -6,7 +6,7 @@ This Matlab program allows to display Muse measures exported using the musemonit
 
 This is primarily an art project, as true back projection of electrode activity on the cortex would require (1) complex inverse source localization math to account for volume condution in different mediums (skin, skull, CSF, cortex) (2) more than 4 channels (in general 64 channels are needed). Here the color of the cortex simply depends on the distance of a given vertices of the brain mesh with each of the 4 Muse electrodes, which is not realistic. At best, it is poor approximation of volume conductions effects.
 
-Note also about signal recorded from each electrodes: Muse records 4 scalp channels, each one representing the difference between some electrode voltage(s) and some other electrode voltage(s). In the Muse case, the average signal from the two mastoid is subtracted from all 4 channels. So the activity of a given channel does not really represent the activity at the location of the channel, but instead the difference of potential between the electrode at the location between a given channel and its reference(s).
+Note about signal recorded from each electrodes: Muse records 4 scalp channels, each one representing the difference between some electrode voltage(s) and some other electrode voltage(s). In the Muse case, the average signal from the two mastoid electrodes (posterior electrodes behind the ears) is subtracted from all 4 channels. So the activity of a given channel does not really represent the activity at the location of the channel, but instead the difference of potential between the electrode at the location between a given channel and its reference(s). Ideally, for this visualization, one would transform the data to average reference prior to computing spectral power. However, given that spectral power is provided by the Muse headset, this is not what is done here (it would be possible to transform the raw data to average reference and recompute spectral power).
 
 # How to install and use
 
@@ -34,6 +34,10 @@ https://www.youtube.com/watch?v=oZDS52bRmXk
 
 - The MuseMonitor app which collects the data only works (as of Jan 2019) on Muse headsets version 1, not on the newer Muse 2. So only Muse 1 data files may be vizualized using this program. 
 
-# Future extension
+# Future direction
 
-A great project would be to connect Muse to Matlab either using LSL (Labstreaminglayer) or the OSC (Open Sound Control) protocol. The Muse SDK (Software Development Kit) supports both protocols. Then it would be possible to see changes in the 3-D brain in real time. It is not a hard project, but who has time these days. If you fork this repository to do that, let me know and I will reference it here.
+One project would be to change the reference of the raw data (compute average reference) then recompute spectral power for each channel prior to vizualising power.
+
+Another project would be to connect Muse to Matlab either using LSL (Labstreaminglayer) or the OSC (Open Sound Control) protocol. The Muse SDK (Software Development Kit) supports both protocols. Then it would be possible to see changes in the 3-D brain in real time. 
+
+These are not a hard projects. Please fork this repository and make push request if you implement these changes.
